@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sukabumishopping</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= render 'shareds/header_top' %>
+
+	<% if params[:action] == 'home' %>
+	<%= render 'shareds/carousel_top' %>
+	<% end %>
+
+	<%= yield %>
+
+	<%= render 'shareds/footer_bottom1' %>
+	<%= render 'shareds/footer_bottom2' %>
+</body>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</html>
