@@ -3,15 +3,43 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="bottom-section-inner clearfix">
-					<div class="iklan-google-1 round4 mb20 pad-ads-2">
-						<div class="media-item col-sm-8 col-xs-9">
-							<%= image_tag '4257.jpg', class: 'img-thumbnail pad-ads-kiri', alt: 'Sukabumi Shopping' %>
+					<div class="col-md-4">
+						<div class="panel panel-info brdr-color-blue">
+							<div class="panel-body brdr-heading-blue">
+								<div class="align-center margin-bottom20 title">
+									Berita Terbaru
+									<div class="brdr-bottom1"></div>
+								</div>
+								<% (1..10).each do %>
+									<a href="#" class="list-group-item">Judul Berita terbaru</a>
+								<% end %>
+							</div>
 						</div>
-						<div class="media-item col-sm-3 col-md-3">
-							<a href="#" class="btn22 btn-kuning btn-advertise">
-								<span class="adv-icon"><i class="fa fa-users"></i></span>
-								<span class="adv-text">Ingin beriklan barang di <br> SukabumiShopping.com?</span>
-							</a>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-info brdr-color-blue">
+							<div class="panel-body brdr-heading-blue">
+								<div class="align-center margin-bottom20 title">
+									Berita Hot
+									<div class="brdr-bottom1"></div>
+								</div>
+								<% (1..10).each do %>
+									<a href="#" class="list-group-item">Judul Berita</a>
+								<% end %>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-info brdr-color-blue">
+							<div class="panel-body brdr-heading-blue">
+								<div class="align-center margin-bottom20 title">
+									Forum Komunitas 
+									<div class="brdr-bottom1"></div>
+								</div>
+								<% (1..10).each do %>
+								<a href="#" class="list-group-item">Judul Topik Forum</a>
+								<% end %>
+							</div>
 						</div>
 					</div>
 				</div>

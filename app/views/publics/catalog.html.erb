@@ -54,13 +54,13 @@
 
 <div class="container">
 	<div class="row box-padding">
-		<!-- breadcumbs -->
 		<div class="col-md-12">
-			<div class="btn-group btn-breadcrumb">
-				<a href="#" class="btn btn-info"><i class="glyphicon glyphicon-home"></i></a>
-				<a href="#" class="btn btn-info">List Catalog</a>
-				<a href="#" class="btn btn-info">Mobil</a>
-				<a href="#" class="btn btn-info">Accesoriss</a>
+			<div class="breadcrumbs">
+				<a href="#">Home</a>
+				<%= image_tag 'marker_2.gif' %>
+				<a href="#">Elektronik & Gadget</a>
+				<%= image_tag 'marker_2.gif' %>
+				Laptop Acer 4743 GH
 			</div>
 		</div>
 		<div class="br20"></div>
@@ -290,12 +290,13 @@
 								</div>
 							</div>
 						</div>
+						<% (1..12).each do %>
 						<a href="#" class="hover-barang">
 							<div class="prop-item col-sm-6 col-md-4">
 								<div class="thumbnail brdr-shadow">
 									<a href="#">
-										<div class="thumbnail-img thumbscrubber smooth">
-											<span class="ts-inner">
+										<div class="thumbnail-img thumbscrubber smooth mg-zoom-image">
+											<span class="ts-inner ">
 												<%= image_tag 'single1.jpg', class: 'ts-currslide', alt: 'Sukabumi Shopping' %>
 											</span>
 										</div>
@@ -311,111 +312,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="#" class="hover-barang">
-							<div class="prop-item col-sm-6 col-md-4">
-								<div class="thumbnail brdr-shadow">
-									<a href="#">
-										<div class="thumbnail-img thumbscrubber smooth">
-											<span class="ts-inner">
-												<%= image_tag 'single1.jpg', class: 'ts-currslide', alt: 'Sukabumi Shopping' %>
-											</span>
-										</div>
-										<div class="thumbnail-body">
-											<div class="caption">
-												<h3>Judul Iklan</h3>
-												<span class="small-font grey italic">dibuat Senin, 29 Mei 2010</span>
-												<span class="prop-address">Kota Sukabumi, Kecamatan Gunung Puyuh</span>
-												<div class="prop-price">Rp. 10.000.000,-/NEGO</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-						</a>
-						<a href="#" class="hover-barang">
-							<div class="prop-item col-sm-6 col-md-4">
-								<div class="thumbnail brdr-shadow">
-									<a href="#">
-										<div class="thumbnail-img thumbscrubber smooth">
-											<span class="ts-inner">
-												<%= image_tag 'single1.jpg', class: 'ts-currslide', alt: 'Sukabumi Shopping' %>
-											</span>
-										</div>
-										<div class="thumbnail-body">
-											<div class="caption">
-												<h3>Judul Iklan</h3>
-												<span class="small-font grey italic">dibuat Senin, 29 Mei 2010</span>
-												<span class="prop-address">Kota Sukabumi, Kecamatan Gunung Puyuh</span>
-												<div class="prop-price">Rp. 10.000.000,-/NEGO</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-						</a>
-						<a href="#" class="hover-barang">
-							<div class="prop-item col-sm-6 col-md-4">
-								<div class="thumbnail brdr-shadow">
-									<a href="#">
-										<div class="thumbnail-img thumbscrubber smooth">
-											<span class="ts-inner">
-												<%= image_tag 'single1.jpg', class: 'ts-currslide', alt: 'Sukabumi Shopping' %>
-											</span>
-										</div>
-										<div class="thumbnail-body">
-											<div class="caption">
-												<h3>Judul Iklan</h3>
-												<span class="small-font grey italic">dibuat Senin, 29 Mei 2010</span>
-												<span class="prop-address">Kota Sukabumi, Kecamatan Gunung Puyuh</span>
-												<div class="prop-price">Rp. 10.000.000,-/NEGO</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-						</a>
-						<a href="#" class="hover-barang">
-							<div class="prop-item col-sm-6 col-md-4">
-								<div class="thumbnail brdr-shadow">
-									<a href="#">
-										<div class="thumbnail-img thumbscrubber smooth">
-											<span class="ts-inner">
-												<%= image_tag 'single1.jpg', class: 'ts-currslide', alt: 'Sukabumi Shopping' %>
-											</span>
-										</div>
-										<div class="thumbnail-body">
-											<div class="caption">
-												<h3>Judul Iklan</h3>
-												<span class="small-font grey italic">dibuat Senin, 29 Mei 2010</span>
-												<span class="prop-address">Kota Sukabumi, Kecamatan Gunung Puyuh</span>
-												<div class="prop-price">Rp. 10.000.000,-/NEGO</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-						</a>
-						<a href="#" class="hover-barang">
-							<div class="prop-item col-sm-6 col-md-4">
-								<div class="thumbnail brdr-shadow">
-									<a href="#">
-										<div class="thumbnail-img thumbscrubber smooth">
-											<span class="ts-inner">
-												<%= image_tag 'single1.jpg', class: 'ts-currslide', alt: 'Sukabumi Shopping' %>
-											</span>
-										</div>
-										<div class="thumbnail-body">
-											<div class="caption">
-												<h3>Judul Iklan</h3>
-												<span class="small-font grey italic">dibuat Senin, 29 Mei 2010</span>
-												<span class="prop-address">Kota Sukabumi, Kecamatan Gunung Puyuh</span>
-												<div class="prop-price">Rp. 10.000.000,-/NEGO</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-						</a>
+						<% end %>
 					</div>
 				</div>
 				<ul class="pagination">

@@ -12,30 +12,14 @@
 						</ol>
 					
 						<div class="carousel-inner">
-							<div class="item active">
-								<%= image_tag 'home-banners3.jpg', alt:'Sukabumi Shopping Portal Jual Beli barang Bekas' %>
-								<div class="carousel-caption">
-									<a href="#">Temukan Barang Anda Disini</a>
+							<% (1..4).each do |f| %>
+								<div class="item <%= 'active' if  f == 1 %>">
+									<%= image_tag 'home-banners3.jpg', alt:'#' %>
+									<div class="carousel-caption">
+										<a href="#">Situs Jual Beli barang No 1 di Sukabumi</a>
+									</div>
 								</div>
-							</div>
-							<div class="item">
-								<%= image_tag 'home-banners1.jpg', alt:'Sukabumi Shopping Portal Jual Beli barang Bekas' %>
-								<div class="carousel-caption">
-									<a href="#">Cepat, Hemat, Terpercaya</a>
-								</div>
-							</div>
-							<div class="item">
-								<%= image_tag 'home-banners3.jpg', alt:'Sukabumi Shopping Portal Jual Beli barang Bekas' %>
-								<div class="carousel-caption">
-									<a href="#">Cepat, Hemat, Terpercaya</a>
-								</div>
-							</div>
-							<div class="item">
-								<%= image_tag 'home-banners1.jpg', alt:'Sukabumi Shopping Portal Jual Beli barang Bekas' %>
-								<div class="carousel-caption">
-									<a href="#">Situs Jual Barang Baru dan Bekas no. 1</a>
-								</div>
-							</div>
+							<% end %>
 						</div>
 						<a class="left carousel-control" href="#carousel" data-slide="prev">
 							<span class="fa fa-angle-left carousel-40 padding-size-carousel"></span>
