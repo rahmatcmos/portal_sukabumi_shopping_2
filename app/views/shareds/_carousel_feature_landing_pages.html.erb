@@ -1,0 +1,35 @@
+<section id="property-carousel">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="property-main-slider">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div id="carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel" data-slide-to="1"></li>
+							<li data-target="#carousel" data-slide-to="2"></li>
+							<li data-target="#carousel" data-slide-to="3"></li>
+						</ol>
+					
+						<div class="carousel-inner">
+							<% (1..4).each do |f| %>
+								<div class="item <%= 'active' if  f == 1 %>">
+									<%= image_tag 'home-banners3.jpg', alt:'#' %>
+									<div class="carousel-caption">
+										<a href="#">Situs Jual Beli barang No 1 di Sukabumi</a>
+									</div>
+								</div>
+							<% end %>
+						</div>
+						<a class="left carousel-control" href="#carousel" data-slide="prev">
+							<span class="fa fa-angle-left carousel-40 padding-size-carousel"></span>
+						</a>
+						<a class="right carousel-control" href="#carousel" data-slide="next">
+							<span class="fa fa-angle-right carousel-40 padding-size-carousel"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

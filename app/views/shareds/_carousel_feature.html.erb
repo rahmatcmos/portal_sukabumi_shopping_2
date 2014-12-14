@@ -1,0 +1,27 @@
+<div id="filmstrip" class="filmstrip slide">
+	<div class="filmstrip-top">
+		<div class="filmstrip-inner">
+			<% (1..5).each do |f| %>
+			<div class="item <%= 'active' if f == 1 %>">
+				<%= image_tag 'single1.jpg', class: 'media-object', alt: '#' %>
+			</div>
+			<% end %>
+		</div>
+		<a class="left filmstrip-control" href="#filmstrip" data-filmstrip="prev"> 
+			<i class="fa fa-chevron-left"></i>
+		</a>
+		<a class="right filmstrip-control" href="#filmstrip" data-filmstrip="next">
+			<i class="fa fa-chevron-right"></i>
+		</a>
+	</div>
+	<div class="filmstrip-thumbs-wrapper">
+		<div class="filmstrip-thumbs">
+			<% (1..5).each do %>
+			<a class="thumb selector" href="#filmstrip" data-filmstrip="selector">
+				<%= image_tag 'single1.jpg', class: 'media-object', alt: 'Sukabumi Shopping' %>
+				<div class="pointer"></div>
+			</a>
+			<% end %>
+		</div>
+	</div>
+</div>
