@@ -1,61 +1,9 @@
-<section id="mini-property-search">
-	<div class="container">
-		<div class="row">
-			<div class="property-list-search mini">
-				<div class="col-sm-12 col-md-12">
-					<div class="inner">
-						<form class="form-inline form-search clearfix" role="form">
-							<div class="form-group col-sm-3 col-lg-2">
-								<label for="">Kategori barang baru</label>
-								<select class="form-control">
-									<option>Pilih kategori ...</option>
-									<option>Mobil</option>
-									<option>Motor</option>
-									<option>Property</option>
-									<option>Elektronik</option>
-									<option>Perlengkapan & elektronik rumah tangga</option>
-									<option>Fashion & Accesorris</option>
-									<option>Perlengkapan bayi dan anak</option>
-									<option>Hobi & Olahraga</option>
-									<option>Hewan peliharaan</option>
-									<option>Bisnis ke bisnis</option>
-									<option>Pekerjaan dan jasa</option>
-									<option>Makanan dan Minuman</option>
-								</select>
-							</div>
-							<div class="form-group col-sm-3 col-lg-3">
-								<label for="">Kota/Kabupaten</label>
-								<select name="location" id="location" class="form-control" onChange="get_agency(this.value);">
-									<option value="">Pilih Daerah ...</option>
-									<option value="1">Kota Sukabumi</option>
-									<option value="2">Kabupaten Sukabumi</option>
-								</select>
-							</div>
-							<div class="form-group col-sm-3 col-lg-3">
-								<label for="">Kecamatan</label>
-								<select class="form-control" name="name" id="sub_district">
-									<option>Pilih Daerah ...</option>
-								</select>
-							</div>
-							<div class="form-group col-sm-3 col-lg-3">
-								<label for="">Kata Pencarian</label>
-								<input type="text" class="form-control" id="exampleInputEmail2" placeholder="Masukan Kata Pencarian">
-							</div>
-							<div class="form-group col-sm-1 col-lg-1 margin-top">
-								<button type="submit" class="btn btn-flat-asphalt btn-search2">Cari</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<%= render 'shareds/mini_property_search_top' %>
 
 <div class="container">
 	<div class="row box-padding">
 		<div class="col-md-12">
-			<div class="breadcrumbs">
+			<div class="breadcrumbs padd-left16">
 				<a href="#">Home</a>
 				<%= image_tag 'marker_2.gif' %>
 				<a href="#">Elektronik & Gadget</a>
@@ -64,195 +12,60 @@
 			</div>
 		</div>
 		<div class="br20"></div>
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<section id="sidebar">
-				<section id="aside-property-search">
-					<div class="property-list-search aside">
-						<div class="inner">
-							<div class="panel-group">
-								<div class="panel panel-default panel-search">
-									<div class="panel-heading">
-										<h4 class="panel-title">
-											Filter Pencarian
-										</h4>
-									</div>
-									<div class="panel-collapse collapse in">
-										<div class="panel-body panel-body-color padding0">
-											<form class="form-search clearfix" role="form">
-												<div class="form-group col-lg-12">
-													<label for="">Masukan Kata Pencarian</label>
-													<input type="text" class="form-control" id="" placeholder="Search">
-												</div>
-												<div class="form-group col-lg-12">
-													<label for="">Kategori Barang</label>
-													<select class="form-control">
-														<option>-- Pilih Kategori Barang --</option>
-														<option>Sepeda Motor</option>
-														<option>Mobil</option>
-														<option>Property</option>
-														<option>Elektronik & Gadget</option>
-														<option>Perlengkapan Bayi</option>
-														<option>Laptop</option>
-														<option>Lowongan Kerja</option>
-													</select>
-												</div>
-												<div class="form-group col-lg-12">
-													<label for="">Kota/kabupaten</label>
-													<select class="form-control">
-														<option>-- Pilih daerah --</option>
-														<option>Kota Sukabumi</option>
-														<option>Kabupaten Sukabumi</option>
-													</select>
-												</div>
-												<div class="form-group col-lg-12">
-													<label for="">Kecamatan</label>
-													<select class="form-control">
-														<option>-- -- -- -- --</option>
-														<option>Gunung Puyuh</option>
-														<option>Warudoyong</option>
-														<option>Baros</option>
-														<option>Cibeureum</option>
-														<option>Cikole</option>
-													</select>
-												</div>
-												<div class="form-group col-lg-12">
-													<button type="submit" class="btn btn-filter-orange btn-filter-depan font-btn-filter-depan full100" style="font-size: 20px;">Cari Barang</button>
-												</div>
-											</form>
-										</div>
+				<section id="aside-product-search">
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="col-md-6">
+								<a href="#" class="btn btn-default">Pencarian Baru</a>
+							</div>
+							<div class="col-md-6">
+								<a href="#" class="btn btn-default">Refresh Page</a>
+							</div>
+						</div>
+						<div class="br10"></div>
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default active">
+								<div class="panel-heading" role="tab" id="headingOne">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											Kata Pencarian
+										</a>
+									</h4>
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse in" aria-labelledby="headingOne">
+									<div class="panel-body">
+										test
 									</div>
 								</div>
 							</div>
-							<div class="panel panel-white">
-								<div class="panel-body">
-									<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
-									<div class="font-18 font-bold border-bottom padding-13">PILIH KATEGORI BARANG :</div>
-									<div class="br10"></div>
-
-									<ul class="ul-select-category">
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#mobil" aria-expanded="false" aria-controls="collapseTwo"><span class="fa fa-plus"></span>  Mobil</a> 
-											<div id="mobil" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<ul class="image-li">
-													<li><a href="">Mobil</a></li>
-													<li><a href="">Aksesoris & Suku Cadang</a></li>
-													<li><a href="">Kendaraan Lain</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#motor" aria-expanded="false" aria-controls="collapseTwo">
-												<span class="fa fa-plus"></span>  Sepeda motor
-											</a> 
-											<div id="motor" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<ul class="image-li">
-													<li><a href="">Sepeda Motor</a></li>
-													<li><a href="">Aksesoris & Suku Cadang</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#property" aria-expanded="false" aria-controls="collapseTwo"><span class="fa fa-plus"></span>  Poperty</a> 
-											<div id="property" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<ul class="image-li">
-													<li><a href="">Properti dijual</a></li>
-													<li><a href="">Properti disewakan</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#elektronik" aria-expanded="false" aria-controls="collapseTwo">
-												<span class="fa fa-plus"></span>  Elektronik
-											</a> 
-											<div id="elektronik" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<ul class="image-li">
-													<li><a href="">Telepon genggam & accessoris</a></li>
-													<li><a href="">Kamera & accessoris</a></li>
-													<li><a href="">Komputer, Tablet & accessoris</a></li>
-													<li><a href="">Video Games & Gadget</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#pert" aria-expanded="false" aria-controls="collapseTwo">
-												<span class="fa fa-plus"></span>  Perlengkapan & elektronik rumah tangga
-											</a> 
-											<div id="pert" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<ul class="image-li">
-													<li><a href="">Furnitur & peralatan rumah</a></li>
-													<li><a href="">TV & Elektronik rumah tangga</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#fashion" aria-expanded="false" aria-controls="collapseTwo">
-												<span class="fa fa-plus"></span>  Fashion & accesorris
-											</a> 
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#baby" aria-expanded="false" aria-controls="collapseTwo">
-												<span class="fa fa-plus"></span>  Perlengkapan bayi & anak
-											</a> 
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#sport" aria-expanded="false" aria-controls="collapseTwo">
-												<span class="fa fa-plus"></span>  Hobi & Olahraga
-											</a> 
-											<div id="sport" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<ul class="image-li">
-													<li><a href="">Olahraga Outdoor</a></li>
-													<li><a href="">Sepeda & accessoris</a></li>
-													<li><a href="">Musik/Film/Buku</a></li>
-													<li><a href="">Hobi & Barang koleksi</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#animal" aria-expanded="false" aria-controls="collapseTwo">
-												<span class="fa fa-plus"></span>  Hewan peliharaan
-											</a> 
-											<div id="animal" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<ul class="image-li">
-													<li><a href="">Hewan Air</a></li>
-													<li><a href="">Hewan Darat</a></li>
-													<li><a href="">Hewan Udara</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#businnes" aria-expanded="false" aria-controls="collapseTwo">
-												<span class="fa fa-plus"></span>  Bisnis ke bisnis
-											</a> 
-											<div id="businnes" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<ul class="image-li">
-													<li><a href="">Peralatan kantor</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#services" aria-expanded="false" aria-controls="collapseTwo">
-												<span class="fa fa-plus"></span>  Pekerjaan & Jasa
-											</a> 
-											<div id="services" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<ul class="image-li">
-													<li><a href="">Lowongan Kerja</a></li>
-													<li><a href="">Jasa</a></li>
-													<li><a href="">Travel</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#food" aria-expanded="false" aria-controls="collapseTwo">
-												<span class="fa fa-plus"></span>  Makanan & Minuman
-											</a> 
-											<div id="food" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-												<ul class="image-li">
-													<li><a href="">Makanan</a></li>
-													<li><a href="">Minuman</a></li>
-												</ul>
-											</div>
-										</li>
-									</ul>
+							<div class="panel panel-default active">
+								<div class="panel-heading" role="tab" id="headingTwo">
+									<h4 class="panel-title">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											Jenis Barang
+										</a>
+									</h4>
+								</div>
+								<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									<div class="panel-body">
+										test
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default active">
+								<div class="panel-heading" role="tab" id="headingThree">
+									<h4 class="panel-title">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+											Kategori Barang
+										</a>
+									</h4>
+								</div>
+								<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									<div class="panel-body">
+										test
+									</div>
 								</div>
 							</div>
 						</div>
@@ -260,7 +73,7 @@
 				</section>
 			</section>
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-9">
 			<section id="content">
 				<div class="row">
 					<div id="property-list" class="property-list full-listing grid-layout clearfix">
@@ -270,17 +83,42 @@
 						<div class="col-sm-12 col-md-12">
 							<div class="filter-bar clearfix">
 								<div class="row">
-									<div class="col-xs-12">
+									<div class="col-xs-3">
+										<form class="form-inline clearfix">
+											<ul class="list-unstyled pull-right filter-option">
+												<li>
+													<div class="btn-group">
+														<select name="" class="form-control padd-left4">
+															<option value="">Urutkan: Pilih</option>
+															<option value="Iklan Terbaru">Iklan Terbaru</option>
+															<option value="Dari A-Z">Dari A-Z</option>
+															<option value="Dari Z-A">Dari Z-A</option>
+															<option value="Dari Mahal ke Murah">Dari Mahal ke Murah</option>
+															<option value="Dari Murah ke Mahal">Dari Murah ke Mahal</option>
+														</select>
+													</div>
+												</li>
+											</ul>
+										</form>
+									</div>
+									<div class="col-xs-3">
+										<form class="form-inline clearfix">
+											<button class="btn btn-primary">
+												<i class="glyphicon glyphicon-floppy-disk"></i> Simpan pencarian
+											</button>
+										</form>
+									</div>
+									<div class="col-xs-6">
 										<form class="form-inline clearfix">
 											<ul class="list-unstyled pull-right filter-option">
 												<li>
 													<div class="btn-group">
 														Tampilan :
-														<a href="#" id="gridview" class="switcher active"> 
-															<i class="fa fa-th"></i>
-														</a>
-														<a href="#" id="listview" class="switcher"> 
+														<a href="#" id="listview" class="switcher active"> 
 															<i class="fa fa-th-list"></i>
+														</a>
+														<a href="#" id="gridview" class="switcher"> 
+															<i class="fa fa-th"></i>
 														</a>
 													</div>
 												</li>
@@ -293,7 +131,7 @@
 						<% (1..12).each do %>
 						<a href="#" class="hover-barang">
 							<div class="prop-item col-sm-6 col-md-4">
-								<div class="thumbnail brdr-shadow">
+								<div class="thumbnail box-border-product brdr-shadow">
 									<a href="#">
 										<div class="thumbnail-img thumbscrubber smooth mg-zoom-image">
 											<span class="ts-inner ">
@@ -305,7 +143,7 @@
 												<h3>Helm Nolan Exlite </h3>
 												<span class="small-font grey italic">dibuat Senin, 29 Mei 2010</span>
 												<span class="prop-address">Kota Sukabumi, Kecamatan Gunung Puyuh</span>
-												<div class="prop-price">Rp. 10.000.000,-/NEGO</div>
+												<div class="prop-price">Rp. 10.000.000</div>
 											</div>
 										</div>
 									</a>
@@ -346,3 +184,10 @@
 		</div>
 	</div>
 </div>
+
+<section id="mid-section">
+	<div class="container">
+		<div class="row">
+		</div>
+	</div>
+</section>

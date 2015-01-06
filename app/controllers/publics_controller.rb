@@ -18,4 +18,8 @@ class PublicsController < ApplicationController
 	def sign_up
 		
 	end
+
+	def news
+		
+	end
 end

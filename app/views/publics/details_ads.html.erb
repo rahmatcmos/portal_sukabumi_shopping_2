@@ -1,60 +1,17 @@
-<section id="mini-property-search">
-	<div class="container">
-		<div class="row">
-			<div class="property-list-search mini">
-				<div class="col-sm-12 col-md-12">
-					<div class="inner">
-						<form class="form-inline form-search clearfix" role="form">
-							<div class="form-group col-sm-3 col-lg-2">
-								<label for="">Kategori barang baru</label>
-								<select class="form-control">
-									<option>Pilih kategori ...</option>
-									<option>Mobil</option>
-									<option>Motor</option>
-									<option>Property</option>
-									<option>Elektronik</option>
-									<option>Perlengkapan & elektronik rumah tangga</option>
-									<option>Fashion & Accesorris</option>
-									<option>Perlengkapan bayi dan anak</option>
-									<option>Hobi & Olahraga</option>
-									<option>Hewan peliharaan</option>
-									<option>Bisnis ke bisnis</option>
-									<option>Pekerjaan dan jasa</option>
-									<option>Makanan dan Minuman</option>
-								</select>
-							</div>
-							<div class="form-group col-sm-3 col-lg-3">
-								<label for="">Kota/Kabupaten</label>
-								<select name="location" id="location" class="form-control" onChange="get_agency(this.value);">
-									<option value="">Pilih Daerah ...</option>
-									<option value="1">Kota Sukabumi</option>
-									<option value="2">Kabupaten Sukabumi</option>
-								</select>
-							</div>
-							<div class="form-group col-sm-3 col-lg-3">
-								<label for="">Kecamatan</label>
-								<select class="form-control" name="name" id="sub_district">
-									<option>Pilih Daerah ...</option>
-								</select>
-							</div>
-							<div class="form-group col-sm-3 col-lg-3">
-								<label for="">Kata Pencarian</label>
-								<input type="text" class="form-control" id="exampleInputEmail2" placeholder="Masukan Kata Pencarian">
-							</div>
-							<div class="form-group col-sm-1 col-lg-1 margin-top">
-								<button type="submit" class="btn btn-flat-asphalt btn-search2">Cari</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<%= render 'shareds/mini_property_search_top' %>
 
 <div class="container">
 	<div class="row box-padding">
-		<div class="col-md-9">
+		<div class="col-md-12">
+			<div class="breadcrumbs">
+				<a href="#">Home</a>
+				<%= image_tag 'marker_2.gif' %>
+				<a href="#">Elektronik & Gadget</a>
+				<%= image_tag 'marker_2.gif' %>
+				Laptop Acer 4743 GH
+			</div>
+		</div>
+		<div class="col-md-8">
 			<section id="content">
 				<div class="row">
 					<div id="property-list" class="property-list property-list-single grid-layout clearfix">
@@ -66,6 +23,8 @@
 									</div>
 									<div class="col-xs-4">
 										<span class="prop-price">Rp. 3.800.000,- /NEGO</span>
+										<span class="desc-product">Nomor iklan : SS342KXRT</span>
+										<span class="desc-product">Dilihat : 300 Kali</span>
 									</div>
 								</div>
 							</div>
@@ -76,9 +35,9 @@
 									<div class="filmstrip-top">
 										<div class="filmstrip-inner">
 											<% (1..5).each do |f| %>
-												<div class="item <%= 'active' if f == 1 %>">
-													<%= image_tag 'single1.jpg', class: 'media-object', alt: '#' %>
-												</div>
+											<div class="item <%= 'active' if f == 1 %>">
+												<%= image_tag 'single1.jpg', class: 'media-object', alt: '#' %>
+											</div>
 											<% end %>
 										</div>
 										<a class="left filmstrip-control" href="#filmstrip" data-filmstrip="prev"> 
@@ -91,10 +50,10 @@
 									<div class="filmstrip-thumbs-wrapper">
 										<div class="filmstrip-thumbs">
 											<% (1..5).each do %>
-												<a class="thumb selector" href="#filmstrip" data-filmstrip="selector">
-													<%= image_tag 'single1.jpg', class: 'media-object', alt: 'Sukabumi Shopping' %>
-													<div class="pointer"></div>
-												</a>
+											<a class="thumb selector" href="#filmstrip" data-filmstrip="selector">
+												<%= image_tag 'single1.jpg', class: 'media-object', alt: 'Sukabumi Shopping' %>
+												<div class="pointer"></div>
+											</a>
 											<% end %>
 										</div>
 									</div>
@@ -103,121 +62,134 @@
 									<p>
 										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste enim esse suscipit odit consectetur ex velit ipsa accusantium, cumque nulla temporibus atque est voluptate, in? Beatae libero, asperiores voluptas illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste enim esse suscipit odit consectetur ex velit ipsa accusantium, cumque nulla temporibus atque est voluptate, in? Beatae libero, asperiores voluptas illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste enim esse suscipit odit consectetur ex velit ipsa accusantium, cumque nulla temporibus atque est voluptate, in? Beatae libero, asperiores voluptas illum.
 									</p>
-								</div>
-							</div>
-							<div class="property-contact">
-								<div class="align-center margin-bottom20 title">
-									INFORMASI BARANG
-								</div>
-								<div class="normal-form">
-									<div role="tabpanel">
-										<ul class="nav nav-tabs" role="tablist">
-											<li role="presentation" class="active">
-												<a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-													Cetak
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste enim esse suscipit odit consectetur ex velit ipsa accusantium, cumque nulla temporibus atque est voluptate, in? Beatae libero, asperiores voluptas illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste enim esse suscipit odit consectetur ex velit ipsa accusantium, cumque nulla temporibus atque est voluptate, in? Beatae libero, asperiores voluptas illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste enim esse suscipit odit consectetur ex velit ipsa accusantium, cumque nulla temporibus atque est voluptate, in? Beatae libero, asperiores voluptas illum.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste enim esse suscipit odit consectetur ex velit ipsa accusantium, cumque nulla temporibus atque est voluptate, in? Beatae libero, asperiores voluptas illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste enim esse suscipit odit consectetur ex velit ipsa accusantium, cumque nulla temporibus atque est voluptate, in? Beatae libero, asperiores voluptas illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste enim esse suscipit odit consectetur ex velit ipsa accusantium, cumque nulla temporibus atque est voluptate, in? Beatae libero, asperiores voluptas illum.
+									</p>
+									<legend></legend>
+									<div class="property-contact">
+										<div class="align-center margin-bottom20 title">
+											INFORMASI BARANG
+										</div>
+										<ul class="nav nav-tabs nav-tabs2" role="tablist" id="myTab">
+											<li class="active">
+												<a href="#comment" role="tab" data-toggle="tab">
+													<span class="fa fa-comments"></span> Komentar
 												</a>
 											</li>
-											<li role="presentation">
-												<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">	Kirim ke teman
+											<li class="">
+												<a href="#cetak" role="tab" data-toggle="tab">
+													<span class="fa fa-print"></span> Cetak
 												</a>
 											</li>
-											<li role="presentation">
-												<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
-													Messages
+											<li class="">
+												<a href="#sent_friend" role="tab" data-toggle="tab">
+													<span class="fa fa-users"></span> Kirim ke teman
 												</a>
 											</li>
-											<li role="presentation">
-												<a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
-													Settings
+											<li class="">
+												<a href="#report_problem" role="tab" data-toggle="tab">
+													<span class="fa fa-info"></span> Laporkan penyalahgunaan
+												</a>
+											</li>
+											<li class="">
+												<a href="#feedback" role="tab" data-toggle="tab">
+													<span class="fa fa-map-marker"></span> Lokasi
 												</a>
 											</li>
 										</ul>
 										<div class="tab-content">
-											<div role="tabpanel" class="tab-pane active" id="home">
-												<div class="btn btn-primary">Cetak Iklan</div>
+											<div class="tab-pane active" id="comment">
+												<div class="row">
+													<div class="col-md-3">
+														<%= image_tag 'user2.jpg', class: 'img-thumbnail' %>
+													</div>
+													<div class="col-md-9">
+														<form action="" class="form-group form-margin-left21-right22">
+															<div class="form-group">
+																<textarea cols="30" rows="3" class="form-control" placeholder="Pesan"></textarea>
+															</div>
+															<div class="form-group">
+																<button type="submit" class="btn btn-info">Kirim</button>
+															</div>
+														</form>
+													</div>
+												</div>
 											</div>
-											<div role="tabpanel" class="tab-pane" id="profile">
-												<form action="">
-													<div class="form-group">
-														<label>Nama</label>
-														<input type="text" class="form-control" name="" placeholder="Name">
+											<div class="tab-pane tab-kategori-ul" id="cetak">
+												<a href="">
+													<button class="btn btn-success btn-block">
+														<i class="fa fa-print"></i>Cetak Iklan ini
+													</button>
+												</a>
+											</div> 
+											<div class="tab-pane tab-kategori-ul" id="sent_friend">
+												<form action="" class="form-group form-margin-left21-right22">
+													<div class="input-group">
+														<div class="input-group-addon">Nama :</div>
+														<input type="text" class="form-control bg-greyy-input">
+													</div>
+													<div class="input-group">
+														<div class="input-group-addon">Email :</div>
+														<input type="email" class="form-control bg-greyy-input">
 													</div>
 													<div class="form-group">
-														<label>Pesan</label>
-														<textarea name="#" class="form-control" id="" cols="30" rows="10"></textarea>
+														<textarea cols="30" rows="3" class="form-control" placeholder="Pesan"></textarea>
 													</div>
 													<div class="form-group">
-														<label>Email Anda</label>
-														<input type="text" class="form-control" name="" placeholder="Name">
-													</div>
-													<div class="form-group">
-														<label></label>
-														<div class="btn btn-primary">Kirim</div>
+														<button type="submit" class="btn btn-info">Kirim</button>
 													</div>
 												</form>
 											</div>
-											<div role="tabpanel" class="tab-pane" id="messages">...</div>
-											<div role="tabpanel" class="tab-pane" id="settings">...</div>
+											<div class="tab-pane tab-kategori-ul" id="report_problem">
+												<form action="" class="form-group form-margin-left21-right22">
+													<div class="input-group">
+														<div class="input-group-addon">Email :</div>
+														<input type="email" class="form-control bg-greyy-input">
+													</div>
+													<div class="form-group">
+														<textarea cols="30" rows="3" class="form-control" placeholder="Pesan"></textarea>
+													</div>
+													<div class="form-group">
+														<button type="submit" class="btn btn-info">Kirim</button>
+													</div>
+												</form>
+											</div>
+											<div class="tab-pane tab-kategori-ul" id="feedback">
+												Feedback user
+											</div>
 										</div>
-									</div>
-								</div>
-							</div>	
-							<div class="br10"></div>
-							<div class="padding0">
-								<div class="col-md-3">
-									<a href="">
-										<button class="btn btn-primary btn-block">
-											<span class="fa fa-facebook"></span> Facebook
-										</button>
-									</a>
-								</div>
-								<div class="col-md-3">
-									<a href="">
-										<button class="btn btn-info btn-block">
-											<span class="fa fa-twitter"></span> Twitter
-										</button>
-									</a>
-								</div>
-								<div class="col-md-3">
-									<a href="">
-										<button class="btn btn-danger btn-block">
-											<span class="fa fa-pinterest"></span> Pinterest
-										</button>
-									</a>
-								</div>
-								<div class="col-md-3">
-									<a href="">
-										<button class="btn btn-danger btn-block">
-											<span class="fa fa-google-plus"></span> Google+
-										</button>
-									</a>
+									</div>	
+									<div class="br10"></div>
 								</div>
 							</div>
-							<div class="property-contact padding-top50">
+							<div class="property-contact padding-top0">
 								<div class="align-center margin-bottom20 title">
 									BARANG LAINNYA DENGAN HARGA YANG HAMPIR SAMA
 								</div>
 								<div class="padding0">
 									<% (1..3).each do %>
-										<a href="#" class="hover-barang">
-											<div class="prop-item col-sm-6 col-md-4">
-												<div class="thumbnail brdr-shadow">
-													<a href="#">
-														<div class="thumbnail-img thumbscrubber smooth">
-															<span class="ts-inner mg-zoom-image">
-																<%= image_tag 'single1.jpg', class: 'ts-currslide', alt: 'Sukabumi Shopping' %>
-															</span>
+									<a href="#" class="hover-barang">
+										<div class="prop-item col-sm-6 col-md-4">
+											<div class="thumbnail brdr-shadow">
+												<a href="#">
+													<div class="thumbnail-img thumbscrubber smooth">
+														<span class="ts-inner mg-zoom-image">
+															<%= image_tag 'single1.jpg', class: 'ts-currslide', alt: 'Sukabumi Shopping' %>
+														</span>
+													</div>
+													<div class="thumbnail-body brdr-greey">
+														<div class="caption">
+															<h3>Helm Nolan Exlite</h3>
+															<div class="prop-price">Rp. 1.000.000,-/Nego</div>
 														</div>
-														<div class="thumbnail-body brdr-greey">
-															<div class="caption">
-																<h3>Helm Nolan Exlite</h3>
-																<div class="prop-price">Rp. 1.000.000,-/Nego</div>
-															</div>
-														</div>
-													</a>
-												</div>
+													</div>
+												</a>
 											</div>
-										</a>
+										</div>
+									</a>
 									<% end %>
 								</div>
 							</div>					
@@ -226,7 +198,7 @@
 				</div>
 			</section>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-4">
 			<section id="sidebar">
 				<div class="row">
 					<div class="aside-property-profile">
@@ -254,47 +226,79 @@
 									</div>
 									<div class="col-md-12">
 										<span class="small-font grey italic"> 
-											<i class="glyphicon glyphicon-map-marker"></i> Kota Sukabumi, Kecamatan Gunung Puyuh
+											<i class="fa fa-shopping-cart"></i> Member sejak : 13 Januari 2015
 										</span>
 									</div>
+									<div class="col-md-12">
+										<span class="small-font grey italic"> 
+											<i class="glyphicon glyphicon-map-marker"></i> Kota Sukabumi, Kec.Gunung Puyuh
+										</span>
+									</div>
+									<div class="br20"></div>
+									<a href="">
+										<button class="btn btn-success btn-block">
+											<i class="fa fa-user"></i> Profil Penjual
+										</button>
+									</a>
+									<div class="br10"></div>
+									<a href="">
+										<button class="btn btn-success btn-block">
+											<i class="fa fa-star"></i> Save Favorite
+										</button>
+									</a>
+									<div class="br10"></div>
+									<a href="">
+										<button class="btn btn-success btn-block">
+											<i class="fa fa-mail-forward"></i> Feedback Anggota
+										</button>
+									</a>
 								</div>
 							</div>
-							<ul class="list-group list-group-aside">
-								<li class="list-group-item">
-									<a href="#">
-										<div class="btn btn-primary btn-block">
-											<i class="fa fa-star"></i>
-											Save to Favorite
+							<div class="panel panel-default panel-aside">
+								<div class="panel-heading clearfix">
+									<h4 class="panel-title">Kirim Permintaan</h4>
+								</div>
+								<div class="panel-body panel-body-color margin-btm10">
+									<form action="" class="form-group">
+										<div class="input-group">
+											<div class="input-group-addon">Nama :</div>
+											<input type="text" class="form-control bg-greyy-input">
 										</div>
-									</a>
-								</li>
-								<li class="list-group-item">
-									<a href="#">
-										<div class="btn btn-primary btn-block">
-											<i class="fa fa-print"></i>
-											Print this page
+										<div class="input-group">
+											<div class="input-group-addon">Email :</div>
+											<input type="email" class="form-control bg-greyy-input">
 										</div>
-									</a>
-								</li>
-								<li class="list-group-item">
-									<a href="#">
-										<div class="btn btn-primary btn-block">
-											<i class="fa fa-exclamation-circle"></i>
-											Laporkan Iklan ini!
+										<div class="input-group">
+											<div class="input-group-addon">Nomor telephone :</div>
+											<input type="text" class="form-control bg-greyy-input">
 										</div>
-									</a>
-								</li>
-							</ul>
+										<div class="form-group">
+											<textarea cols="30" rows="3" class="form-control" placeholder="Pesan"></textarea>
+										</div>
+										<div class="form-group">
+											<button type="submit" class="btn btn-info">Kirim</button>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="padding0">
+								<div class="btn-group">
+									<button type="button" class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</button>
+									<button type="button" class="btn btn-info"><i class="fa fa-twitter"></i> Twitter</button>
+									<button type="button" class="btn btn-danger"><i class="fa fa-google-plus"></i> Google+</button>
+								</div>
+							</div>
+							<div class="br10"></div>
 							<div class="panel panel-default panel-aside">
 								<div class="panel-heading clearfix">
 									<h4 class="panel-title">Tips belanja secara aman</h4>
 								</div>
-								<div class="panel-body panel-body-color">
-									<ul class="padding-left17">
+								<div class="panel-body panel-body-color margin-btm10">
+									<ol class="padding-left17">
 										<li>Hindari transfer uang di muka</li>
 										<li>Pilih lokasi ketemuan di tempat aman</li>
 										<li><a href="#">Tips Lainnya!</a></li>
-									</ul>
+									</ol>
 								</div>
 							</div>
 						</div>
@@ -304,3 +308,10 @@
 		</div>
 	</div>
 </div>
+
+<section id="mid-section">
+	<div class="container">
+		<div class="row">
+		</div>
+	</div>
+</section>

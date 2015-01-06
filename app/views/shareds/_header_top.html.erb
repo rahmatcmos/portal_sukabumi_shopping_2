@@ -1,3 +1,4 @@
+<div id="loading"></div>
 <a href="#top" id="toTop"></a><header>
 	<section class="header-top">
 		<div class="container">
@@ -23,39 +24,34 @@
 							<span class="icon-bar"></span>
 						</button>
 						<%= link_to root_path, :class => 'navbar-brand italic' do %>
-							<%= image_tag 'logo.png' %>
+							<%= image_tag 'logo-bottom.png' %>
 						<% end %>
 					</div>
 					
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<div class="text-center">
-								<button type="button" class="btn btn-fresh btn-sm btn-red-navbar">
-									<span class="fa fa-search"></span> Iklan Terbaru
-								</button>
-							</div>
-						</li>
-						<li>
-							<div class="ui-group-buttons">
-								<a href="#" data-toggle="modal" data-target="#login">
-									<button type="button" class="btn btn-primary btn-sm btn-login">Login</button>
-								</a>
-								<div class="or or-sm"></div>
-								<a href="#" data-toggle="modal" data-target="#signup">
-									<button type="button" class="btn btn-primary btn-sm btn-register">Daftar</button>
-								</a>
-							</div>
-						</li>
-						<li>
-							<div class="text-center">
-								<a href="#">
-									<button type="button" class="btn btn-primary btn-sm btn-register">
-										<span class="fa fa-plus"></span> Pasang Iklan Gratis
-									</button>
-								</a>
-							</div>
-						</li>
-					</ul>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<div class="ui-group-buttons">
+									<a href="#" data-toggle="modal" data-target="#login">
+										<button type="button" class="btn btn-primary btn-sm btn-login btn-green">Login</button>
+									</a>
+									<div class="or or-sm"></div>
+									<a href="#" data-toggle="modal" data-target="#signup">
+										<button type="button" class="btn btn-primary btn-sm btn-register btn-green">Daftar</button>
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="text-center">
+									<%= link_to root_path do %>
+										<button type="button" class="btn btn-primary btn-sm btn-green">
+											<span class="fa fa-plus"></span> Pasang Iklan Gratis
+										</button>
+									<% end %>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</nav>
 			</div>
 		</div>

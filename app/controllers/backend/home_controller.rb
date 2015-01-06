@@ -1,5 +1,5 @@
-class Backend::HomeController < Backend::ApplicationController
-	def index
+class Backend::HomeController < ApplicationController
+	def sign_in
 	end
 
 	def home
